@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from 'vue'
+import { useThemeStore } from '@/stores/theme'
 
 const props = defineProps({
   padded: {
@@ -17,6 +18,9 @@ const props = defineProps({
     default: false
   }
 })
+
+const themeStore = useThemeStore()
+themeStore.setThemeColor(`${props.bgGray ? '#F6F7F6' : '#FDFDFD'}`)
 
 const bgColor = computed(() => (props.bgGray ? 'var(--background)' : 'var(--white)'))
 </script>
