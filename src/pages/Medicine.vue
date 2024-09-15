@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Main :bg-gray="false">Medicine</Main>
+  <Main :bg-gray="true">Medicine</Main>
 </template>
 
 <style scoped></style>

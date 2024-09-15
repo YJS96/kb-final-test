@@ -1,5 +1,6 @@
 <template>
-  <div :class="padded ? 'padded main-frame ' : 'main-frame'" :style="{ backgroundColor: bgColor }">
+  <div v-if="bgWhite" class="safe-area"></div>
+  <div :class="padded ? 'padded main-frame ' : 'main-frame'">
     <slot></slot>
   </div>
 </template>
@@ -12,13 +13,13 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  bgGray: {
+  bgWhite: {
     type: Boolean,
     default: false
   }
 })
 
-const bgColor = computed(() => (props.bgGray ? 'var(--background)' : 'var(--white)'))
+// const bgColor = computed(() => (props.bgGray ? 'var(--background)' : 'var(--white)'))
 </script>
 
 <style scoped>
@@ -33,5 +34,11 @@ const bgColor = computed(() => (props.bgGray ? 'var(--background)' : 'var(--whit
 
 .padded {
   padding: 0px 5.56%;
+}
+
+.safe-area {
+  position: absolute;
+  top: -env(safe-area-inset-top);
+  height: env(safe-area-inset-top);
 }
 </style>
