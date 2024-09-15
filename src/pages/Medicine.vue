@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useThemeStore } from '@/stores/theme'
+// import { onMounted } from 'vue'
+// import { useThemeStore } from '@/stores/theme'
 
 import Main from '@/components/Main.vue'
 
-const themeStore = useThemeStore()
+// const themeStore = useThemeStore()
 
-onMounted(() => {
-  themeStore.setThemeColor('#FDFDFD')
-})
+// onMounted(() => {
+//   themeStore.setThemeColor('#FDFDFD')
+// })
 </script>
 
 <template>
-  <Main :bg-gray="true">Medicine</Main>
+  <Main :bg-white="true">Medicine</Main>
 </template>
 
 <style scoped></style>
