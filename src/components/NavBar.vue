@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, type Ref } from 'vue'
 
 interface NavTab {
   path: string
