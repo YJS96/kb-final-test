@@ -2,6 +2,8 @@
 import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
+import Main from '@/components/Main.vue'
+
 const themeStore = useThemeStore()
 
 onMounted(() => {
@@ -10,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>Medicine</div>
+  <Main :bg-gray="false">Medicine</Main>
 </template>
 
 <style scoped></style>

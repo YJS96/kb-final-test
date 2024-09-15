@@ -7,6 +7,7 @@ export const useThemeStore = defineStore('theme', {
   actions: {
     setThemeColor(color: string) {
       this.backgroundColor = color
+      document.documentElement.style.setProperty('--background-color', color)
       document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color)
     }
   }
